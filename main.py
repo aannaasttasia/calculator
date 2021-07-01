@@ -234,15 +234,15 @@ def calc(key):
 
     elif key == "save":
         # збереження історії за запитом користувача
-        save = open('save.txt', 'a+')
+        save_new = open('save_new.txt', 'a+')
         history = open('history.txt', 'r')
         hist = history.readline()
-        save.write(hist)
+        save_new.write(hist)
 
-        save == open('save.txt', 'r')
-        add = save.read()
-        save = open('save.txt', 'a+')
-        save.write(add)
+        save_new == open('save_new.txt', 'r')
+        add = save_new.read()
+        save_new = open('save_new.txt', 'a+')
+        save_new.write(add)
 
     elif key == "file":
         # зчитування виразу з файла для обрахунків і виведення його на екран
@@ -270,8 +270,8 @@ def calc(key):
         root.after(1, root.destroy)
         history = open('history.txt', 'w')
         history.write('')
-        save = open('save.txt', 'w')
-        save.write('')
+        save_new = open('save_new.txt', 'w')
+        save_new.write('')
 
     elif key == "xⁿ":
         # піднесення до степеня
